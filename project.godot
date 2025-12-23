@@ -11,9 +11,18 @@ config_version=5
 [application]
 
 config/name="anonymous_prototype"
-run/main_scene="uid://birejw1ilitj0"
+run/main_scene="uid://bkqr6fxxkosfx"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Network="*res://scripts/network.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 
 [input]
 
@@ -52,6 +61,10 @@ arm={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"canceled":false,"pressed":false,"double_click":false,"script":null)
 ]
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 

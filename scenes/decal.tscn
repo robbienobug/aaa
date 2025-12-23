@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://lpv3n6gahlq3"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qn35f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4yn4"]
+transparency = 1
+albedo_color = Color(0, 0.003921569, 0, 0.53333336)
+
+[node name="decal" type="Node3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.509302, 0, 0, 0, 0.12944447, 0, 0, 0, 0.42021614, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_qn35f")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4yn4")

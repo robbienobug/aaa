@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://birejw1ilitj0"]
+[gd_scene load_steps=10 format=3 uid="uid://birejw1ilitj0"]
 
 [ext_resource type="PackedScene" uid="uid://w6nh0uwbtk20" path="res://characters/player.tscn" id="1_n7qq4"]
+[ext_resource type="PackedScene" uid="uid://dkkvjk6ncfdta" path="res://assets/models/demon woman 3d model.glb" id="2_sgkve"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_1rlll"]
 
@@ -37,6 +38,7 @@ environment = SubResource("Environment_onbjd")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_n7qq4")]
 
@@ -48,3 +50,6 @@ mesh = SubResource("BoxMesh_n7qq4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Box/StaticBody3D2"]
 shape = SubResource("ConcavePolygonShape3D_sgkve")
+
+[node name="AuxScene" parent="." instance=ExtResource("2_sgkve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.94525504, 0.5, 0.7323284)
